@@ -1,0 +1,35 @@
+# //  ModelSim PE Student Edition 10.4a Apr  7 2015 
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# // NOT FOR CORPORATE OR PRODUCTION USE.
+# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
+# // FOR HIGHER EDUCATION PURPOSES ONLY
+# //
+# vsim testbench 
+# Start time: 11:13:48 on May 31,2019
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.if_id
+# Loading work.id_ex
+add wave -position insertpoint  \
+sim:/testbench/clk \
+sim:/testbench/reset \
+sim:/testbench/pc40In \
+sim:/testbench/inst0In \
+sim:/testbench/clk_extends \
+sim:/testbench/pc40Out \
+sim:/testbench/inst0out \
+sim:/testbench/pc41Out \
+sim:/testbench/inst1out
+run
