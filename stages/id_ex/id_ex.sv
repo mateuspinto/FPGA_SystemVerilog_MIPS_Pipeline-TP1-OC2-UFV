@@ -2,55 +2,87 @@ module id_ex(
     input logic clk,
     input logic reset,
 
-    input logic [31:0] readRegister0In,
-    input logic [31:0] readRegister1In,
-    input logic [31:0] immediateExtendedIn,
-    input logic [31:0] pcMore4In,
-    input logic [20:16] addressRegisterRtIn,
-    input logic [15:11] addressRegisterRdIn,
-    input logic regDstIn,
-    input logic jumpIn,
-    input logic [1:0] branchIn,
-    input logic memReadIn,
-    input logic memToRegIn,
-    input logic [3:0] aluOpIn,
-    input logic memWriteIn,
-    input logic aluSrcIn,
-    input logic regWriteIn,
+    input logic hazard,
 
-    output logic [31:0] readRegister0Out,
-    output logic [31:0] readRegister1Out,
-    output logic [31:0] immediateExtendedOut,
-    output logic [31:0] pcMore4Out,
-    output logic [20:16] addressRegisterRtOut,
-    output logic [15:11] addressRegisterRdOut,
-    output logic regDstOut,
-    output logic jumpOut,
-    output logic [1:0] branchOut,
-    output logic memReadOut,
-    output logic memToRegOut,
-    output logic [3:0] aluOpOut,
-    output logic memWriteOut,
-    output logic aluSrcOut,
-    output logic regWriteOut
+    input logic memToRegInput,
+    input logic regWriteInput,
+    input logic memWriteInput,
+    input logic memReadInput,
+    input logic [3:0] aluOpInput,
+    input logic aluSrcInput,
+    input logic regDstInput,
+
+    input logic [31:0] immediateExtendedInput,
+
+    input logic [25:21] addressRsInput,
+    input logic [20:16] addressRtInput,
+    input logic [15:11] addressRdInput,
+
+    input logic [31:0] dataRsInput,
+    input logic [31:0] dataRtInput,
+
+    output logic memToRegOutput,
+    output logic regWriteOutput,
+    output logic memWriteOutput,
+    output logic memReadOutput,
+    output logic [3:0] aluOpOutput,
+    output logic aluSrcOutput,
+    output logic regDstOutput,
+
+    output logic [31:0] immediateExtendedOutput,
+
+    output logic [25:21] addressRsOutput,
+    output logic [20:16] addressRtOutput,
+    output logic [15:11] addressRdOutput,
+
+    output logic [31:0] dataRsOutput,
+    output logic [31:0] dataRtOutput
+    
 );
 
 always_ff @(posedge clk) begin 
-    readRegister0Out<=readRegister0In;
-    readRegister1Out<=readRegister1In;
-    immediateExtendedOut<=immediateExtendedIn;
-    pcMore4Out<=pcMore4In;
-    addressRegisterRtOut<=addressRegisterRtIn;
-    addressRegisterRdOut<=addressRegisterRdIn;
-    regDstOut<=regDstIn;
-    jumpOut<=jumpIn;
-    branchOut<=branchIn;
-    memReadOut<=memReadIn;
-    memToRegOut<=memToRegIn;
-    aluOpOut<=aluOpIn;
-    memWriteOut<=memWriteIn;
-    aluSrcOut<=aluSrcIn;
-    regWriteOut<=regWriteIn;
+
+    if(reset | hazard)begin
+
+        memToRegOutput<=0;
+        regWriteOutput<=0;
+        memWriteOutput<=0;
+        memReadOutput<=0;
+        aluOpOutput<=0;
+        aluSrcOutput<=0;
+        regDstOutput<=0;
+
+        immediateExtendedOutput<=0;
+
+        addressRsOutput<=0;
+        addressRtOutput<=0;
+        addressRdOutput<=0;
+
+        dataRsOutput<=0;
+        dataRtOutput<=0;
+
+    end
+
+    else begin
+
+        memToRegOutput<=memToRegInput;
+        regWriteOutput<=regWriteInput;
+        memWriteOutput<=memWriteInput;
+        memReadOutput<=memReadInput;
+        aluOpOutput<=aluOpInput;
+        aluSrcOutput<=aluSrcInput;
+        regDstOutput<=regDstInput;
+
+        immediateExtendedOutput<=immediateExtendedInput;
+
+        addressRsOutput<=addressRsInput;
+        addressRtOutput<=addressRtInput;
+        addressRdOutput<=addressRdInput;
+
+        dataRsOutput<=dataRsInput;
+        dataRtOutput<=dataRtInput;
+
+    end
 end
 
 endmodule
