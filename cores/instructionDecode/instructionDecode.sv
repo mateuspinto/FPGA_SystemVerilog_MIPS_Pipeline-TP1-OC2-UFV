@@ -1,31 +1,49 @@
 module instructionDecode(
+
     input logic clk,
     input logic reset,
-    input logic regWriteIn,
-    input logic [31:0] instruction,
-    input logic [31:0] writeData,
+    
+    //Coming Instruction Fetch
+    input logic [31:0] instructionInput,
+    input logic [31:0] pc4Input,
+
+    //Coming Write Back
+    input logic regWriteInput,
     input logic [4:0] writeRegister,
-    input logic [31:0] pcMore4Input,
-    output logic [31:0] readRegister0,
-    output logic [31:0] readRegister1,
-    output logic [31:0] immediateExtended,
-    output logic [31:0] pcMore4Output,
-    output logic [20:16] addressRegisterRt,
-    output logic [15:11] addressRegisterRd,
-    output logic regDst,
-    output logic jump,
-    output logic [1:0] branch,
-    output logic memRead,
-    output logic memToReg,
-    output logic [3:0] aluOp,
-    output logic memWrite,
-    output logic aluSrc,
-    output logic regWriteOut
+    input logic [31:0] writeDataInput,
+
+    //From Controller 
+    output logic memToRegOutput,
+    output logic regWriteOutput,
+    output logic memWriteOutput,
+    output logic memReadOutput,
+    output logic [3:0] aluOpOutput,
+    output logic aluSrcOutput,
+    output logic regDstOutput,
+
+    output logic [31:0] immediateExtendedOutput,
+
+    output logic [25:21] addressRsOutput,
+    output logic [20:16] addressRtOutput,
+    output logic [15:11] addressRdOutput,
+
+    //From Register DB
+    output logic [31:0] dataRsOutput,
+    output logic [31:0] dataRtOutput,
+
+    //To Instruction Fetch
+    input logic outputBrachControlOutput,
+    input logic [31:0] pcBranchOutput,
+    input logic jumpOutput,
+    input logic [31:0] pcJumpOutput,
 );
 
-registerDatabase registerDatabase0 (clk, reset, regWriteIn, instruction[25:21], instruction[20:16], writeRegister, writeData, readRegister0, readRegister1);
-controller controller0 (reset, instruction[31:26], regDst, jump, branch, memRead, memToReg, aluOp, memWrite, aluSrc, regWriteOut);
-signalExtender16_32bits signalExtender16_32bits0 (instruction[15:0], immediateExtended);
+
+
+
+// registerDatabase registerDatabase0 (clk, reset, regWriteInput, instructionInput[25:21], instructionInput[20:16], writeRegister, writeDataInput, readRegister0, readRegister1);
+// controller controller0 (reset, instructionInput[31:26], regDst, jump, branch, memRead, memToReg, aluOp, memWrite, aluSrc, regWriteOut);
+// signalExtender16_32bits signalExtender16_32bits0 (instructionInput[15:0], immediateExtended);
 
 
 
