@@ -15,7 +15,7 @@ logic [31:0] registers [31:0];
 assign readData1 = registers[readRegister1];
 assign readData2 = registers[readRegister2];
 
-always_ff @(posedge clk) begin
+always_ff @(negedge clk) begin
 
     if(reset) begin
         $readmemb("cores/instructionDecode/registers.txt",registers);
