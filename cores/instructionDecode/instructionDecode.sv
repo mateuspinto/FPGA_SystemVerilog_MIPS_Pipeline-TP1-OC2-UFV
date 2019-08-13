@@ -38,7 +38,7 @@ module instructionDecode(
     output logic [31:0] pcJumpOutput,
 
     output logic ifFlushOutput
-    
+
 );
 
 logic branch, zeroTestOutput;
@@ -60,6 +60,8 @@ shiftLef_2_32bits shiftLef_2_32bits0(immediateExtendedOutput, shiftLef_2_32bitsO
 adder_32bits adder_32bits0 (shiftLef_2_32bitsOutput, pc4Input, pcBranchOutput);
 zeroTest zeroTest0(reset, dataRsOutput, dataRtOutput, zeroTestOutput);
 branchControl branchControl0 (reset, branch, zeroTestOutput, branchControlOutput);
+
+//Jump
 shiftLeft_2_26_28_bits shiftLeft_2_26_28_bits0 (instructionInput[25:0], shiftLeft_2_26_28_bitsOutput);
 
 
