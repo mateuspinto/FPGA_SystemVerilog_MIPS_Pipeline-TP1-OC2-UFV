@@ -17,57 +17,76 @@
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
 # vsim testbench 
-# Start time: 16:05:04 on Jul 28,2019
+# Start time: 13:14:47 on Aug 13,2019
 # Loading sv_std.std
 # Loading work.testbench
+# Loading work.instructionFetch
+# Loading work.instructionMemory
+# Loading work.programCounter
+# Loading work.adderProgramCounter
+# Loading work.mux2_1_32bits
 # Loading work.if_id
+# Loading work.instructionDecode
+# Loading work.libAritimeticalControl
+# Loading work.libInstructions
+# Loading work.controller_sv_unit
+# Loading work.controller
+# Loading work.registerDatabase
+# Loading work.signalExtender16_32bits
+# Loading work.shiftLef_2_32bits
+# Loading work.adder_32bits
+# Loading work.zeroTest
+# Loading work.branchControl
+# Loading work.shiftLeft_2_26_28_bits
 # Loading work.id_ex
-# ** Warning: (vsim-3017) testbench.sv(29): [TFMPC] - Too few port connections. Expected 32, found 6.
-#    Time: 0 ns  Iteration: 0  Instance: /testbench/id_ex0 File: stages/id_ex/id_ex.sv
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'addressRegisterRtIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'addressRegisterRdIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'regDstIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'jumpIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'branchIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'memReadIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'memToRegIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'aluOpIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'memWriteIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'aluSrcIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'regWriteIn'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'readRegister0Out'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'readRegister1Out'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'immediateExtendedOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'pcMore4Out'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'addressRegisterRtOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'addressRegisterRdOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'regDstOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'jumpOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'branchOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'memReadOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'memToRegOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'aluOpOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'memWriteOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'aluSrcOut'.
-# ** Warning: (vsim-3722) testbench.sv(29): [TFMPC] - Missing connection for port 'regWriteOut'.
 add wave -position end  sim:/testbench/clk
 add wave -position end  sim:/testbench/reset
-add wave -position end  sim:/testbench/pc40In
-add wave -position end  sim:/testbench/inst0In
-add wave -position end  sim:/testbench/clk_extends
-add wave -position end  sim:/testbench/pc40Out
-add wave -position end  sim:/testbench/inst0out
-add wave -position end  sim:/testbench/pc41Out
-add wave -position end  sim:/testbench/inst1out
+add wave -position end  sim:/testbench/hazard
+add wave -position end  sim:/testbench/branchControlId
+add wave -position end  sim:/testbench/jumpId
+add wave -position end  sim:/testbench/flushId
+add wave -position end  sim:/testbench/regWriteWb
+add wave -position end  sim:/testbench/memToRegId
+add wave -position end  sim:/testbench/regWriteId
+add wave -position end  sim:/testbench/memWriteId
+add wave -position end  sim:/testbench/memReadId
+add wave -position end  sim:/testbench/aluSrcId
+add wave -position end  sim:/testbench/regDstId
+add wave -position end  sim:/testbench/memToRegEx
+add wave -position end  sim:/testbench/regWriteEx
+add wave -position end  sim:/testbench/memWriteEx
+add wave -position end  sim:/testbench/memReadEx
+add wave -position end  sim:/testbench/aluSrcEx
+add wave -position end  sim:/testbench/regDstEx
+add wave -position end  sim:/testbench/aluOpId
+add wave -position end  sim:/testbench/aluOpEx
+add wave -position end  sim:/testbench/writeRegisterWb
+add wave -position end  sim:/testbench/addressRsId
+add wave -position end  sim:/testbench/addressRtId
+add wave -position end  sim:/testbench/addressRdId
+add wave -position end  sim:/testbench/addressRsEx
+add wave -position end  sim:/testbench/addressRtEx
+add wave -position end  sim:/testbench/addressRdEx
+add wave -position end  sim:/testbench/pcBranchId
+add wave -position end  sim:/testbench/pcJumpId
+add wave -position end  sim:/testbench/instructionIf
+add wave -position end  sim:/testbench/pcIf
+add wave -position end  sim:/testbench/instructionId
+add wave -position end  sim:/testbench/pcId
+add wave -position end  sim:/testbench/writeData
+add wave -position end  sim:/testbench/immediateExtendedId
+add wave -position end  sim:/testbench/dataRsId
+add wave -position end  sim:/testbench/dataRtId
+add wave -position end  sim:/testbench/immediateExtendedEx
+add wave -position end  sim:/testbench/dataRsEx
+add wave -position end  sim:/testbench/dataRtEx
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Leandro Lázaro  Hostname: PC-LEANDRO  ProcessID: 7516
 # 
-#           Attempting to use alternate WLF file "./wlft488sd2".
+#           Attempting to use alternate WLF file "./wlft6j37jf".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft488sd2
+#           Using alternate file: ./wlft6j37jf
 # 
 run
-# End time: 16:07:22 on Jul 28,2019, Elapsed time: 0:02:18
-# Errors: 0, Warnings: 29

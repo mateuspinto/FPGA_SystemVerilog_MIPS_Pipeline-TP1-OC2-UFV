@@ -8,13 +8,87 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/FPGA_SystemVerilog_MIPS_Pipeline-TP1-OC2-UFV
-vclock_extends
+vadder_32bits
 Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z2 !s110 1565712879
+!i10b 1
+!s100 o;@^LC5M^Uhoa]JiPa>k20
+Ie>D;981`]WLG22FezdkLm0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 auxModules_sv_unit
+S1
+R0
+Z5 w1559317278
+Z6 8auxModules.sv
+Z7 FauxModules.sv
+L0 48
+Z8 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z9 !s108 1565712879.000000
+Z10 !s107 cores/instructionDecode/zeroTest.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/branchControl.sv|cores/instructionFetch/programCounter.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/adderProgramCounter.sv|stages/id_ex/id_ex.sv|stages/if_id/if_id.sv|libMips.sv|auxModules.sv|testbench.sv|
+Z11 !s90 testbench.sv|auxModules.sv|libMips.sv|stages/if_id/if_id.sv|stages/id_ex/id_ex.sv|cores/instructionFetch/adderProgramCounter.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/programCounter.sv|cores/instructionDecode/branchControl.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/zeroTest.sv|
+!s101 -O0
+!i113 1
+Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vadderProgramCounter
+R1
+R2
+!i10b 1
+!s100 ^Ih@[65AUl8G_?=n9KUCl1
+In^Uf[RCnW24DKg2h47ddz0
+R3
+!s105 adderProgramCounter_sv_unit
+S1
+R0
+w1564344883
+8cores/instructionFetch/adderProgramCounter.sv
+Fcores/instructionFetch/adderProgramCounter.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nadder@program@counter
+vbranchControl
+R1
+R2
+!i10b 1
+!s100 HV:ZeCE4O1aLoFYc980[f0
+I`8KQ6oO<L70o[6Xa@iPEk2
+R3
+!s105 branchControl_sv_unit
+S1
+R0
+w1565712664
+8cores/instructionDecode/branchControl.sv
+Fcores/instructionDecode/branchControl.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nbranch@control
+vclock_extends
+R1
 !s110 1559301300
 !i10b 1
 !s100 4V[5AWWha3Nn@fJ]No2kn1
 Ik]6B:LKHNc?jHe53]MVGC1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+R3
 !s105 clk_extends_sv_unit
 S1
 R0
@@ -22,7 +96,7 @@ w1559301236
 8clk_extends.sv
 Fclk_extends.sv
 L0 1
-Z3 OP;L;10.4a;61
+R8
 r1
 !s85 0
 31
@@ -31,87 +105,163 @@ r1
 !s90 testbench.sv|clk_extends.sv|
 !s101 -O0
 !i113 1
-Z4 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
-vid_ex
+R12
+vcontroller
 R1
-Z5 !s110 1564343027
+Z13 DXx4 work 15 libInstructions 0 22 `A1JP_oKz90ioT=BojlA_0
+Z14 DXx4 work 22 libAritimeticalControl 0 22 9Wlg_XlP:2T1dJWiWO>P>1
+DXx4 work 18 controller_sv_unit 0 22 oj:FQPg@@MH9EDW672OS73
+R3
+r1
+!s85 0
+31
 !i10b 1
-!s100 40;J<@L0mAkg7:Um`0HO21
-IbjP4Khk0Sajoj;<F;=;FD3
-R2
-Z6 !s105 testbench_sv_unit
+!s100 Uc;V4J=I=lH5F4`33L>b@3
+IAHXIzgCW57;`]6oilEB?l2
+!s105 controller_sv_unit
 S1
 R0
-w1559317257
+Z15 w1565705829
+Z16 8cores/instructionDecode/controller.sv
+Z17 Fcores/instructionDecode/controller.sv
+L0 4
+R8
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+Xcontroller_sv_unit
+R1
+R13
+R14
+Voj:FQPg@@MH9EDW672OS73
+r1
+!s85 0
+31
+!i10b 1
+!s100 <mWc@cD^H5^PEX_7XnoQZ1
+Ioj:FQPg@@MH9EDW672OS73
+!i103 1
+S1
+R0
+R15
+R16
+R17
+L0 1
+R8
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vid_ex
+R1
+R2
+!i10b 1
+!s100 hk=lWGSYBKC9ZoEBVCmY92
+IOH:BgU[z]EL3n_>AY4^]o1
+R3
+!s105 id_ex_sv_unit
+S1
+R0
+w1565705395
 8stages/id_ex/id_ex.sv
 Fstages/id_ex/id_ex.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-Z7 !s108 1564343027.000000
-Z8 !s107 stages/id_ex/id_ex.sv|stages/if_id/if_id.sv|testbench.sv|
-Z9 !s90 testbench.sv|stages/if_id/if_id.sv|stages/id_ex/id_ex.sv|
+R9
+R10
+R11
 !s101 -O0
 !i113 1
-R4
+R12
 vif_id
 R1
-R5
-!i10b 1
-!s100 2omKXQ4f?eM<2lkleSHKm0
-I:_>]Ro=42E2ioPfI^MK<f2
 R2
-R6
+!i10b 1
+!s100 cG;fV3KMjV_Tdg3kALoPf3
+IcFcod=TdB1nNVjdIe@]EQ1
+R3
+!s105 if_id_sv_unit
 S1
 R0
-w1559312015
+w1565712244
 8stages/if_id/if_id.sv
 Fstages/if_id/if_id.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-R7
-R8
 R9
+R10
+R11
 !s101 -O0
 !i113 1
-R4
+R12
+vinstructionDecode
+R1
+Z18 !s110 1565712880
+!i10b 1
+!s100 ]IRXonK>Uh47Y<?LDAal>1
+I:Eo`>jgQKJ[dF[gUzbGa:1
+R3
+!s105 instructionDecode_sv_unit
+S1
+R0
+w1565712671
+8cores/instructionDecode/instructionDecode.sv
+Fcores/instructionDecode/instructionDecode.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+ninstruction@decode
 vinstructionFetch
 R1
-Z10 !s110 1559296876
-!i10b 1
-!s100 BYz]?iEJd20lVEPRB<9L82
-IO7Te74fVY>97X[C@BNdSa3
 R2
+!i10b 1
+!s100 QlFKcVa<MS0me9]1[6CTK2
+Izna3COQ_BPfa0D2PNAL?U3
+R3
 !s105 instructionFetch_sv_unit
 S1
 R0
-w1559296770
+w1565706276
 8cores/instructionFetch/instructionFetch.sv
 Fcores/instructionFetch/instructionFetch.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-Z11 !s108 1559296876.000000
-Z12 !s107 cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/instructionFetch.sv|auxModules.sv|libMips.sv|testbench.sv|
-Z13 !s90 testbench.sv|libMips.sv|auxModules.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/instructionMemory.sv|
+R9
+R10
+R11
 !s101 -O0
 !i113 1
-R4
+R12
 ninstruction@fetch
 vinstructionMemory
 R1
-R10
+R2
 !i10b 1
 !s100 k2f50JlV9i<GRHf@6<;^R2
 I78CYG99X4HajkMe0QZ4J:1
-R2
+R3
 !s105 instructionMemory_sv_unit
 S1
 R0
@@ -119,38 +269,356 @@ w1559296874
 8cores/instructionFetch/instructionMemory.sv
 Fcores/instructionFetch/instructionMemory.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
+R9
+R10
 R11
-R12
-R13
 !s101 -O0
 !i113 1
-R4
+R12
 ninstruction@memory
-vtestbench
+XlibAlu
 R1
-!s110 1559312019
-!i10b 1
-!s100 >m<QFz1lG`NZK0Wzi`m]T2
-I`Uk;S=TBlWRWQ^Zi5KAij1
 R2
-R6
+!i10b 1
+!s100 54JSN[U??[OC@`KfcjzzA1
+IgI6IBe4>NYN64UFQ0k]n81
+VgI6IBe4>NYN64UFQ0k]n81
 S1
 R0
-w1559309003
+Z19 w1559317275
+Z20 8libMips.sv
+Z21 FlibMips.sv
+L0 9
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nlib@alu
+XlibAritimeticalControl
+R1
+R2
+!i10b 1
+!s100 IjdmiJPBIlh:De]ce?R2:3
+I9Wlg_XlP:2T1dJWiWO>P>1
+V9Wlg_XlP:2T1dJWiWO>P>1
+S1
+R0
+R19
+R20
+R21
+L0 73
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nlib@aritimetical@control
+XlibFunctions
+R1
+R2
+!i10b 1
+!s100 ELVOKT]oOCg>@YR26nX>J3
+IH93lYC0U3DTQKd]bBdAf@3
+VH93lYC0U3DTQKd]bBdAf@3
+S1
+R0
+R19
+R20
+R21
+L0 51
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nlib@functions
+XlibInstructions
+R1
+R2
+!i10b 1
+!s100 Rd=8Y;mUIPkBe9Oc7E<lI1
+I`A1JP_oKz90ioT=BojlA_0
+V`A1JP_oKz90ioT=BojlA_0
+S1
+R0
+R19
+R20
+R21
+L0 30
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nlib@instructions
+XlibMdlu
+R1
+R2
+!i10b 1
+!s100 fc0_oc<gQD>NKfV>@KBZo3
+I2B1Z@D76WQ[I]zV`YZNO71
+V2B1Z@D76WQ[I]zV`YZNO71
+S1
+R0
+R19
+R20
+R21
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nlib@mdlu
+vmux2_1_32bits
+R1
+R2
+!i10b 1
+!s100 :YMN5nHT>IGi3Ug2:T]e13
+I1ziF@kAE_?I1NJRNn8VTH2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 60
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vmux2_1_5bits
+R1
+R2
+!i10b 1
+!s100 Fz0RoX]D;B=W>j1?Lh3jW2
+I4Al?@mYVMZ6if88do`oj92
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vprogramCounter
+R1
+R2
+!i10b 1
+!s100 =fY[j@74L;7J@=O89j^aC1
+I98oE0EH`OlYgaNZ2`8bUH1
+R3
+!s105 programCounter_sv_unit
+S1
+R0
+w1565657932
+8cores/instructionFetch/programCounter.sv
+Fcores/instructionFetch/programCounter.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nprogram@counter
+vregisterDatabase
+R1
+R18
+!i10b 1
+!s100 nJ0X0biD0V1PB:HemzboG3
+I`zCnZR;dU>f`1CgJjJ@gN1
+R3
+!s105 registerDatabase_sv_unit
+S1
+R0
+w1565708877
+8cores/instructionDecode/registerDatabase.sv
+Fcores/instructionDecode/registerDatabase.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nregister@database
+vshiftLef_2_32bits
+R1
+R2
+!i10b 1
+!s100 ^MX_kG0nWUGP][3C7CDKP1
+I@CQLnnNeNka6nkcMO67ae0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 25
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nshift@lef_2_32bits
+vshiftLeft_2_26_28_bits
+R1
+R2
+!i10b 1
+!s100 :6I;2UglW8lzXROkiA3421
+IJfo5g6C^ojc1IgYO8go[o3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 36
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nshift@left_2_26_28_bits
+vsignalExtender16_32bits
+R1
+R2
+!i10b 1
+!s100 ^PVMZKbFWhHgYgzo5F9zh0
+IT`SO35]7j9oRbl<:_ihI]3
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 84
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nsignal@extender16_32bits
+vtestbench
+R1
+R2
+!i10b 1
+!s100 PKl]0B<0ViFMIQTkV0[Mi2
+I00TdIz39MQ860UKJ=kIXF3
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1565712442
 8testbench.sv
 Ftestbench.sv
 L0 1
-R3
+R8
 r1
 !s85 0
 31
-!s108 1559312018.000000
-R8
 R9
+R10
+R11
 !s101 -O0
 !i113 1
-R4
+R12
+vzeroTest
+R1
+R18
+!i10b 1
+!s100 [`>iIY1BWCjFH<@2jVI<R1
+ID6AkS4f;D4;=foUh;Gh_z3
+R3
+!s105 zeroTest_sv_unit
+S1
+R0
+w1565699621
+8cores/instructionDecode/zeroTest.sv
+Fcores/instructionDecode/zeroTest.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+nzero@test

@@ -27,3 +27,5 @@ always_ff @(negedge clk) begin
         end
     end
 end
+
+endmodule
