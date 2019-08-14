@@ -27,6 +27,7 @@ module memory(
 assign aluResultOutput=aluResultInput;
 assign memToRegOutput=memToRegInput;
 assign regWriteOutput=regWriteInput;
+assign regWriteAddressOutput=regWriteAddressInput;
 
 memoryDatabase memoryDatabase0(clk, reset, memWriteInput, aluResultInput, memWriteDataInput, dataMemoryOutput);
 
