@@ -41,19 +41,6 @@ module executing(
     output logic [4:0] regWriteRegisterOutput,
 
     output logic aluResultZeroOutput
-
-    // input logic aluSrc,
-    // input logic regDst,
-    // input logic [3:0] aluOp,
-    // input logic [31:0] readRegister0,
-    // input logic [31:0] readRegister1,
-    // input logic [31:0] immediateExtended,
-    // input logic [5:0] func,
-    // input logic [4:0] addressRegisterRt,
-    // input logic [4:0] addressRegisterRd,
-    // output logic [31:0] resultAluOutput,
-    // output logic isAluOutputZero,
-    // output logic [4:0] addressRegWrite;
 );
 
 logic regHiLoWrite;
