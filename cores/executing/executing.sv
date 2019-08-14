@@ -1,30 +1,80 @@
 module executing(
+
     input logic clk,
     input logic reset,
-    input logic aluSrc,
-    input logic regDst,
-    input logic [3:0] aluOp,
-    input logic [31:0] readRegister0,
-    input logic [31:0] readRegister1,
-    input logic [31:0] immediateExtended,
-    input logic [5:0] func,
-    input logic [4:0] addressRegisterRt,
-    input logic [4:0] addressRegisterRd,
-    output logic [31:0] resultAluOutput,
-    output logic isAluOutputZero,
-    output logic [4:0] addressRegWrite;
+
+    input logic memToRegInput,
+    input logic regWriteInput,
+    input logic memWriteInput,
+    input logic memReadInput,
+
+    input logic [3:0] aluOpInput,
+    input logic aluSrcInput,
+    input logic regDstInput,
+
+    input logic [31:0] immediateExtendedInput,
+
+    input logic [25:21] addressRsInput,
+    input logic [20:16] addressRtInput,
+    input logic [15:11] addressRdInput,
+
+    input logic [31:0] dataRsInput,
+    input logic [31:0] dataRtInput,
+
+    input logic [5:0] funcInput,
+
+    input logic [1:0] forwardingMux0Input,
+    input logic [1:0] forwardingMux1Input,
+
+    input logic [31:0] regWriteDataWbInput,
+    input logic [31:0] aluResultMemInput,
+
+    output logic memToRegOutput,
+    output logic regWriteOutput,
+    output logic memWriteOutput,
+    output logic memReadOutput,
+
+    output logic [31:0] aluResultOutput,
+
+    output logic [31:0] memWriteDataOutput,
+
+    output logic [4:0] regWriteRegisterOutput,
+
+    output logic aluResultZeroOutput
+
+    // input logic aluSrc,
+    // input logic regDst,
+    // input logic [3:0] aluOp,
+    // input logic [31:0] readRegister0,
+    // input logic [31:0] readRegister1,
+    // input logic [31:0] immediateExtended,
+    // input logic [5:0] func,
+    // input logic [4:0] addressRegisterRt,
+    // input logic [4:0] addressRegisterRd,
+    // output logic [31:0] resultAluOutput,
+    // output logic isAluOutputZero,
+    // output logic [4:0] addressRegWrite;
 );
 
-wire [3:0] aluControl;
-// wire [31:0] resultAluOutput;
-wire [31:0] aluInput1;
-wire [1:0] regHiLoWrite;
+logic regHiLoWrite;
+logic [3:0] aluControl;
+logic [31:0] mux3_1_32bits0Output, mux3_1_32bits1Output, mux2_1_32bits0Output;
+ 
+assign memToRegOutput=memToRegInput;
+assign regWriteOutput=regWriteInput;
+assign memWriteOutput=memWriteInput;
+assign memReadOutput=memReadInput;
+assign memWriteDataOutput=mux3_1_32bits1Output;
 
-mux2_1_32bits mux2_1_32bits0 (aluSrc, readRegister1, immediateExtended, aluInput1);
-mux2_1_5bits mux2_1_5bits0 (regDst, addressRegisterRt, addressRegisterRd, addressRegWrite);
+mux3_1_32bits mux3_1_32bits0 (forwardingMux0Input, dataRsInput, regWriteDataWbInput, aluResultMemInput, mux3_1_32bits0Output);
+mux3_1_32bits mux3_1_32bits1 (forwardingMux1Input, dataRtInput, regWriteDataWbInput, aluResultMemInput, mux3_1_32bits1Output);
 
-aritimeticalControl aritimeticalControl0 (reset, aluOp, func, aluControl, regHiLoWrite);
-alu alu0 (reset, aluControl, readRegister0, aluInput1, resultAluOutput, isAluOutputZero);
+mux2_1_32bits mux2_1_32bits0 (aluSrcInput, mux3_1_32bits1Output, immediateExtendedInput, mux2_1_32bits0Output);
+
+mux2_1_5bits mux2_1_5bits0 (regDstInput, addressRtInput, addressRdInput, regWriteRegisterOutput);
+
+aritimeticalControl aritimeticalControl0 (reset, aluOpInput, funcInput, aluControl, regHiLoWrite);
+alu alu0 (reset, aluControl, mux3_1_32bits0Output, mux2_1_32bits0Output, aluResultOutput, aluResultZeroOutput);
 
 
 endmodule

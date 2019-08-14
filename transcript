@@ -17,7 +17,7 @@
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
 # vsim testbench 
-# Start time: 10:04:12 on Aug 14,2019
+# Start time: 12:18:49 on Aug 14,2019
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.instructionFetch
@@ -39,6 +39,15 @@
 # Loading work.branchControl
 # Loading work.shiftLeft_2_26_28_bits
 # Loading work.id_ex
+# Loading work.executing
+# Loading work.mux3_1_32bits
+# Loading work.mux2_1_5bits
+# Loading work.libFunctions
+# Loading work.libAlu
+# Loading work.aritimeticalControl_sv_unit
+# Loading work.aritimeticalControl
+# Loading work.alu_sv_unit
+# Loading work.alu
 add wave -position end  sim:/testbench/clk
 add wave -position end  sim:/testbench/reset
 add wave -position end  sim:/testbench/hazard
@@ -58,6 +67,13 @@ add wave -position end  sim:/testbench/memWriteEx
 add wave -position end  sim:/testbench/memReadEx
 add wave -position end  sim:/testbench/aluSrcEx
 add wave -position end  sim:/testbench/regDstEx
+add wave -position end  sim:/testbench/memToRegExOutput
+add wave -position end  sim:/testbench/regWriteExOutput
+add wave -position end  sim:/testbench/memWriteExOutput
+add wave -position end  sim:/testbench/memReadExOutput
+add wave -position end  sim:/testbench/aluResultZeroEx
+add wave -position end  sim:/testbench/forwardingMux0Ex
+add wave -position end  sim:/testbench/forwardingMux1Ex
 add wave -position end  sim:/testbench/aluOpId
 add wave -position end  sim:/testbench/aluOpEx
 add wave -position end  sim:/testbench/writeRegisterWb
@@ -67,6 +83,9 @@ add wave -position end  sim:/testbench/addressRdId
 add wave -position end  sim:/testbench/addressRsEx
 add wave -position end  sim:/testbench/addressRtEx
 add wave -position end  sim:/testbench/addressRdEx
+add wave -position end  sim:/testbench/regWriteRegisterEx
+add wave -position end  sim:/testbench/funcId
+add wave -position end  sim:/testbench/funcEx
 add wave -position end  sim:/testbench/pcBranchId
 add wave -position end  sim:/testbench/pcJumpId
 add wave -position end  sim:/testbench/instructionIf
@@ -80,15 +99,17 @@ add wave -position end  sim:/testbench/dataRtId
 add wave -position end  sim:/testbench/immediateExtendedEx
 add wave -position end  sim:/testbench/dataRsEx
 add wave -position end  sim:/testbench/dataRtEx
+add wave -position end  sim:/testbench/regWriteDataWb
+add wave -position end  sim:/testbench/aluResultMem
+add wave -position end  sim:/testbench/aluResultEx
+add wave -position end  sim:/testbench/memWriteDataEx
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Leandro Lázaro  Hostname: PC-LEANDRO  ProcessID: 7516
 # 
-#           Attempting to use alternate WLF file "./wlftyqhwkd".
+#           Attempting to use alternate WLF file "./wlfttznhjr".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftyqhwkd
+#           Using alternate file: ./wlfttznhjr
 # 
 run
-# End time: 10:09:42 on Aug 14,2019, Elapsed time: 0:05:30
-# Errors: 0, Warnings: 2

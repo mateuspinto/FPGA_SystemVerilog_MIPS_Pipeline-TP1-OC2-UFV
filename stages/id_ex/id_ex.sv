@@ -21,6 +21,8 @@ module id_ex(
     input logic [31:0] dataRsInput,
     input logic [31:0] dataRtInput,
 
+    input logic [5:0] funcInput,
+
     output logic memToRegOutput,
     output logic regWriteOutput,
     output logic memWriteOutput,
@@ -36,7 +38,9 @@ module id_ex(
     output logic [15:11] addressRdOutput,
 
     output logic [31:0] dataRsOutput,
-    output logic [31:0] dataRtOutput
+    output logic [31:0] dataRtOutput,
+
+    output logic [5:0] funcOutput
     
 );
 
@@ -61,6 +65,8 @@ always_ff @(posedge clk) begin
         dataRsOutput<=0;
         dataRtOutput<=0;
 
+        funcOutput<=0;
+
     end
 
     else begin
@@ -81,6 +87,8 @@ always_ff @(posedge clk) begin
 
         dataRsOutput<=dataRsInput;
         dataRtOutput<=dataRtInput;
+
+        funcOutput<=funcInput;
 
     end
 end

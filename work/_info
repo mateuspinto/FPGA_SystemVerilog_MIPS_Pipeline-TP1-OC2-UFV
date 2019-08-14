@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/FPGA_SystemVerilog_MIPS_Pipeline-TP1-OC2-UFV
 vadder_32bits
 Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z2 !s110 1565787834
+Z2 !s110 1565795922
 !i10b 1
 !s100 o;@^LC5M^Uhoa]JiPa>k20
 Ie>D;981`]WLG22FezdkLm0
@@ -18,7 +18,7 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 !s105 auxModules_sv_unit
 S1
 R0
-Z5 w1559317278
+Z5 w1565791318
 Z6 8auxModules.sv
 Z7 FauxModules.sv
 L0 48
@@ -26,9 +26,9 @@ Z8 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z9 !s108 1565787833.000000
-Z10 !s107 cores/instructionDecode/zeroTest.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/branchControl.sv|cores/instructionFetch/programCounter.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/adderProgramCounter.sv|stages/id_ex/id_ex.sv|stages/if_id/if_id.sv|libMips.sv|auxModules.sv|testbench.sv|
-Z11 !s90 testbench.sv|auxModules.sv|libMips.sv|stages/if_id/if_id.sv|stages/id_ex/id_ex.sv|cores/instructionFetch/adderProgramCounter.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/programCounter.sv|cores/instructionDecode/branchControl.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/zeroTest.sv|
+Z9 !s108 1565795921.000000
+Z10 !s107 cores/executing/executing.sv|cores/executing/aritimeticalControl.sv|cores/executing/alu.sv|cores/instructionDecode/zeroTest.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/branchControl.sv|cores/instructionFetch/programCounter.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/adderProgramCounter.sv|stages/id_ex/id_ex.sv|stages/if_id/if_id.sv|libMips.sv|auxModules.sv|testbench.sv|
+Z11 !s90 testbench.sv|auxModules.sv|libMips.sv|stages/if_id/if_id.sv|stages/id_ex/id_ex.sv|cores/instructionFetch/adderProgramCounter.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/programCounter.sv|cores/instructionDecode/branchControl.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/zeroTest.sv|cores/executing/alu.sv|cores/executing/aritimeticalControl.sv|cores/executing/executing.sv|
 !s101 -O0
 !i113 1
 Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
@@ -57,9 +57,113 @@ R11
 !i113 1
 R12
 nadder@program@counter
+valu
+R1
+Z13 DXx4 work 6 libAlu 0 22 gI6IBe4>NYN64UFQ0k]n81
+DXx4 work 11 alu_sv_unit 0 22 MDXBR^^C<K5FaUNDUL[El1
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 aj@X>C8jK?6XAe`5N`U5S1
+ID4DjbkIF[B`g<i?YNT2JM2
+!s105 alu_sv_unit
+S1
+R0
+Z14 w1559318045
+Z15 8cores/executing/alu.sv
+Z16 Fcores/executing/alu.sv
+L0 3
+R8
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+Xalu_sv_unit
+R1
+R13
+VMDXBR^^C<K5FaUNDUL[El1
+r1
+!s85 0
+31
+!i10b 1
+!s100 VnQ[5a5`6o[h0l6^:[o`21
+IMDXBR^^C<K5FaUNDUL[El1
+!i103 1
+S1
+R0
+R14
+R15
+R16
+L0 1
+R8
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+varitimeticalControl
+R1
+R13
+Z17 DXx4 work 12 libFunctions 0 22 H93lYC0U3DTQKd]bBdAf@3
+Z18 DXx4 work 22 libAritimeticalControl 0 22 9Wlg_XlP:2T1dJWiWO>P>1
+DXx4 work 27 aritimeticalControl_sv_unit 0 22 S>bhLKKXHV]?5Q:J1=Bo`0
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 W;<4N_?ClQdTUoD]z_Vo<1
+IlbjMB_Y`nghI55E5z9Qh@2
+!s105 aritimeticalControl_sv_unit
+S1
+R0
+Z19 w1559317967
+Z20 8cores/executing/aritimeticalControl.sv
+Z21 Fcores/executing/aritimeticalControl.sv
+L0 5
+R8
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+naritimetical@control
+XaritimeticalControl_sv_unit
+R1
+R13
+R17
+R18
+VS>bhLKKXHV]?5Q:J1=Bo`0
+r1
+!s85 0
+31
+!i10b 1
+!s100 0d3gB5i7VjK206BzdI[_[0
+IS>bhLKKXHV]?5Q:J1=Bo`0
+!i103 1
+S1
+R0
+R19
+R20
+R21
+L0 1
+R8
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+naritimetical@control_sv_unit
 vbranchControl
 R1
-Z13 !s110 1565787835
+R2
 !i10b 1
 !s100 HV:ZeCE4O1aLoFYc980[f0
 I`8KQ6oO<L70o[6Xa@iPEk2
@@ -108,8 +212,8 @@ r1
 R12
 vcontroller
 R1
-Z14 DXx4 work 15 libInstructions 0 22 `A1JP_oKz90ioT=BojlA_0
-Z15 DXx4 work 22 libAritimeticalControl 0 22 9Wlg_XlP:2T1dJWiWO>P>1
+Z22 DXx4 work 15 libInstructions 0 22 `A1JP_oKz90ioT=BojlA_0
+R18
 DXx4 work 18 controller_sv_unit 0 22 oj:FQPg@@MH9EDW672OS73
 R3
 r1
@@ -121,9 +225,9 @@ IAHXIzgCW57;`]6oilEB?l2
 !s105 controller_sv_unit
 S1
 R0
-Z16 w1565705829
-Z17 8cores/instructionDecode/controller.sv
-Z18 Fcores/instructionDecode/controller.sv
+Z23 w1565705829
+Z24 8cores/instructionDecode/controller.sv
+Z25 Fcores/instructionDecode/controller.sv
 L0 4
 R8
 R9
@@ -134,8 +238,8 @@ R11
 R12
 Xcontroller_sv_unit
 R1
-R14
-R15
+R22
+R18
 Voj:FQPg@@MH9EDW672OS73
 r1
 !s85 0
@@ -146,11 +250,35 @@ Ioj:FQPg@@MH9EDW672OS73
 !i103 1
 S1
 R0
-R16
-R17
-R18
+R23
+R24
+R25
 L0 1
 R8
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
+vexecuting
+R1
+R2
+!i10b 1
+!s100 K@fBjH<aZAoo2[Ya@N@6i1
+IPa;CSJToCZGBYC3iDaeLU2
+R3
+!s105 executing_sv_unit
+S1
+R0
+w1565794049
+8cores/executing/executing.sv
+Fcores/executing/executing.sv
+L0 1
+R8
+r1
+!s85 0
+31
 R9
 R10
 R11
@@ -161,13 +289,13 @@ vid_ex
 R1
 R2
 !i10b 1
-!s100 hk=lWGSYBKC9ZoEBVCmY92
-IOH:BgU[z]EL3n_>AY4^]o1
+!s100 jRDBLH1n4hi61mD4nZ8^j0
+IC<d>b6b;T?`eDD=_;MH2n2
 R3
 !s105 id_ex_sv_unit
 S1
 R0
-w1565705395
+w1565793006
 8stages/id_ex/id_ex.sv
 Fstages/id_ex/id_ex.sv
 L0 1
@@ -207,15 +335,15 @@ R11
 R12
 vinstructionDecode
 R1
-R13
+R2
 !i10b 1
-!s100 gDh=LO74EG3h=n?^YlZ>70
-IW6Xn61lMaBL0i@Jj;U>iS1
+!s100 oeOJefV_?If=c^D<RK8nD0
+I_6FzE;1<NFV>OV6W<Zf360
 R3
 !s105 instructionDecode_sv_unit
 S1
 R0
-w1565787822
+w1565791924
 8cores/instructionDecode/instructionDecode.sv
 Fcores/instructionDecode/instructionDecode.sv
 L0 1
@@ -289,9 +417,9 @@ IgI6IBe4>NYN64UFQ0k]n81
 VgI6IBe4>NYN64UFQ0k]n81
 S1
 R0
-Z19 w1559317275
-Z20 8libMips.sv
-Z21 FlibMips.sv
+Z26 w1559317275
+Z27 8libMips.sv
+Z28 FlibMips.sv
 L0 9
 R8
 r1
@@ -313,9 +441,9 @@ I9Wlg_XlP:2T1dJWiWO>P>1
 V9Wlg_XlP:2T1dJWiWO>P>1
 S1
 R0
-R19
-R20
-R21
+R26
+R27
+R28
 L0 73
 R8
 r1
@@ -337,9 +465,9 @@ IH93lYC0U3DTQKd]bBdAf@3
 VH93lYC0U3DTQKd]bBdAf@3
 S1
 R0
-R19
-R20
-R21
+R26
+R27
+R28
 L0 51
 R8
 r1
@@ -361,9 +489,9 @@ I`A1JP_oKz90ioT=BojlA_0
 V`A1JP_oKz90ioT=BojlA_0
 S1
 R0
-R19
-R20
-R21
+R26
+R27
+R28
 L0 30
 R8
 r1
@@ -385,9 +513,9 @@ I2B1Z@D76WQ[I]zV`YZNO71
 V2B1Z@D76WQ[I]zV`YZNO71
 S1
 R0
-R19
-R20
-R21
+R26
+R27
+R28
 L0 1
 R8
 r1
@@ -448,6 +576,30 @@ R11
 !s101 -O0
 !i113 1
 R12
+vmux3_1_32bits
+R1
+R2
+!i10b 1
+!s100 ]5ajCdPNAgWmB`8Gk_4k11
+I8fF9S[Q?RNHKi^702E:o<1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 109
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
 vprogramCounter
 R1
 R2
@@ -475,15 +627,15 @@ R12
 nprogram@counter
 vregisterDatabase
 R1
-R13
+R2
 !i10b 1
-!s100 nJ0X0biD0V1PB:HemzboG3
-I`zCnZR;dU>f`1CgJjJ@gN1
+!s100 [5idBg[5V?_Q3zO7Y07`@2
+IK=c:QaRPCRR=TUEYHTfTR3
 R3
 !s105 registerDatabase_sv_unit
 S1
 R0
-w1565708877
+w1565795911
 8cores/instructionDecode/registerDatabase.sv
 Fcores/instructionDecode/registerDatabase.sv
 L0 1
@@ -577,13 +729,13 @@ vtestbench
 R1
 R2
 !i10b 1
-!s100 PKl]0B<0ViFMIQTkV0[Mi2
-I00TdIz39MQ860UKJ=kIXF3
+!s100 =USo`zL>TE2mk<_[N]Ano2
+IHh:WM68C@z[=g>U3AnbG@1
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1565712442
+w1565795539
 8testbench.sv
 Ftestbench.sv
 L0 1
@@ -599,7 +751,7 @@ R11
 R12
 vzeroTest
 R1
-R13
+R2
 !i10b 1
 !s100 [`>iIY1BWCjFH<@2jVI<R1
 ID6AkS4f;D4;=foUh;Gh_z3

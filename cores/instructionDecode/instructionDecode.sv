@@ -37,6 +37,8 @@ module instructionDecode(
     output logic jumpOutput,
     output logic [31:0] pcJumpOutput,
 
+    output logic [5:0] funcOutput,
+
     output logic ifFlushOutput
 
 );
@@ -51,6 +53,7 @@ assign addressRtOutput=instructionInput[20:16];
 assign addressRdOutput=instructionInput[15:11];
 assign pcJumpOutput={pc4Input[31:28], shiftLeft_2_26_28_bitsOutput};
 assign ifFlushOutput=(branchControlOutput | jumpOutput);
+assign funcOutput=instructionInput[5:0];
 
 controller controller0 (reset, instructionInput[31:26], regDstOutput, jumpOutput, branch, memReadOutput, memToRegOutput, aluOpOutput, memWriteOutput, aluSrcOutput, regWriteOutput);
 registerDatabase registerDatabase0 (clk, reset, regWriteInput, instructionInput[25:21], instructionInput[20:16], writeRegisterInput, writeDataInput, dataRsOutput, dataRtOutput);

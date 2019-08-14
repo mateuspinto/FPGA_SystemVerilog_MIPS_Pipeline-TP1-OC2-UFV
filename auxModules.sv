@@ -105,3 +105,36 @@ always_comb begin
 end
 
 endmodule
+
+module mux3_1_32bits(
+    input logic [1:0] control,
+    input logic [31:0] input0,
+    input logic [31:0] input1,
+    input logic [31:0] input2,
+    output logic [31:0] output0
+);
+
+always_comb begin
+    case(control)
+
+        0: begin
+            output0 <= input0;
+        end
+
+        1: begin
+            output0 <= input1;
+        end
+
+        2: begin
+            output0 <= input2;
+        end
+
+        default: begin
+            output0 <= 0;
+        end
+
+    endcase
+    
+end
+
+endmodule
