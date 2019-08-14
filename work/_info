@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/FPGA_SystemVerilog_MIPS_Pipeline-TP1-OC2-UFV
 vadder_32bits
 Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-Z2 !s110 1565795922
+Z2 !s110 1565812130
 !i10b 1
 !s100 o;@^LC5M^Uhoa]JiPa>k20
 Ie>D;981`]WLG22FezdkLm0
@@ -26,9 +26,9 @@ Z8 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z9 !s108 1565795921.000000
-Z10 !s107 cores/executing/executing.sv|cores/executing/aritimeticalControl.sv|cores/executing/alu.sv|cores/instructionDecode/zeroTest.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/branchControl.sv|cores/instructionFetch/programCounter.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/adderProgramCounter.sv|stages/id_ex/id_ex.sv|stages/if_id/if_id.sv|libMips.sv|auxModules.sv|testbench.sv|
-Z11 !s90 testbench.sv|auxModules.sv|libMips.sv|stages/if_id/if_id.sv|stages/id_ex/id_ex.sv|cores/instructionFetch/adderProgramCounter.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/programCounter.sv|cores/instructionDecode/branchControl.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/zeroTest.sv|cores/executing/alu.sv|cores/executing/aritimeticalControl.sv|cores/executing/executing.sv|
+Z9 !s108 1565812130.000000
+Z10 !s107 cores/executing/executing.sv|cores/executing/aritimeticalControl.sv|cores/executing/alu.sv|cores/instructionDecode/zeroTest.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/branchControl.sv|cores/instructionFetch/programCounter.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/adderProgramCounter.sv|stages/ex_mem/ex_mem.sv|stages/id_ex/id_ex.sv|stages/if_id/if_id.sv|libMips.sv|auxModules.sv|testbench.sv|
+Z11 !s90 testbench.sv|auxModules.sv|libMips.sv|stages/if_id/if_id.sv|stages/id_ex/id_ex.sv|stages/ex_mem/ex_mem.sv|cores/instructionFetch/adderProgramCounter.sv|cores/instructionFetch/instructionFetch.sv|cores/instructionFetch/instructionMemory.sv|cores/instructionFetch/programCounter.sv|cores/instructionDecode/branchControl.sv|cores/instructionDecode/controller.sv|cores/instructionDecode/instructionDecode.sv|cores/instructionDecode/registerDatabase.sv|cores/instructionDecode/zeroTest.sv|cores/executing/alu.sv|cores/executing/aritimeticalControl.sv|cores/executing/executing.sv|
 !s101 -O0
 !i113 1
 Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
@@ -261,17 +261,41 @@ R11
 !s101 -O0
 !i113 1
 R12
+vex_men
+R1
+R2
+!i10b 1
+!s100 iJ=0Y]SS@KOfQUzbB9[<g2
+IldbIfcc>2_4<fhH2N4nI<1
+R3
+!s105 ex_mem_sv_unit
+S1
+R0
+w1565811406
+8stages/ex_mem/ex_mem.sv
+Fstages/ex_mem/ex_mem.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+!i113 1
+R12
 vexecuting
 R1
 R2
 !i10b 1
-!s100 K@fBjH<aZAoo2[Ya@N@6i1
-IPa;CSJToCZGBYC3iDaeLU2
+!s100 1>WVF:L=`T7foN3V[ee0l1
+IeR>l0]`XPTXC87io<hmVl1
 R3
 !s105 executing_sv_unit
 S1
 R0
-w1565794049
+w1565796171
 8cores/executing/executing.sv
 Fcores/executing/executing.sv
 L0 1
@@ -729,13 +753,13 @@ vtestbench
 R1
 R2
 !i10b 1
-!s100 =USo`zL>TE2mk<_[N]Ano2
-IHh:WM68C@z[=g>U3AnbG@1
+!s100 cS9`BITczCCiNcig:3R1D0
+Ichn8mIK?>WzeYl5K;[_j33
 R3
 !s105 testbench_sv_unit
 S1
 R0
-w1565795539
+w1565812125
 8testbench.sv
 Ftestbench.sv
 L0 1

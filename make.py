@@ -18,7 +18,7 @@ syntetizer = "vlog"
 simulator = "vsim"
 
 testbench = "testbench"
-files = testbench + ".sv auxModules.sv libMips.sv stages/if_id/if_id.sv stages/id_ex/id_ex.sv cores/instructionFetch/adderProgramCounter.sv cores/instructionFetch/instructionFetch.sv cores/instructionFetch/instructionMemory.sv cores/instructionFetch/programCounter.sv cores/instructionDecode/branchControl.sv cores/instructionDecode/controller.sv cores/instructionDecode/instructionDecode.sv cores/instructionDecode/registerDatabase.sv cores/instructionDecode/zeroTest.sv cores/executing/alu.sv cores/executing/aritimeticalControl.sv cores/executing/executing.sv"
+files = testbench + ".sv auxModules.sv libMips.sv stages/if_id/if_id.sv stages/id_ex/id_ex.sv stages/ex_mem/ex_mem.sv cores/instructionFetch/adderProgramCounter.sv cores/instructionFetch/instructionFetch.sv cores/instructionFetch/instructionMemory.sv cores/instructionFetch/programCounter.sv cores/instructionDecode/branchControl.sv cores/instructionDecode/controller.sv cores/instructionDecode/instructionDecode.sv cores/instructionDecode/registerDatabase.sv cores/instructionDecode/zeroTest.sv cores/executing/alu.sv cores/executing/aritimeticalControl.sv cores/executing/executing.sv"
 exit = 0
 
 showMenu()
