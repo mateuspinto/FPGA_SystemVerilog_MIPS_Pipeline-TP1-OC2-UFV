@@ -17,7 +17,7 @@
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
 # vsim testbench 
-# Start time: 16:49:08 on Aug 14,2019
+# Start time: 17:51:06 on Aug 14,2019
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.instructionFetch
@@ -49,6 +49,8 @@
 # Loading work.alu_sv_unit
 # Loading work.alu
 # Loading work.ex_men
+# Loading work.memory
+# Loading work.memoryDatabase
 add wave -position end  sim:/testbench/clk
 add wave -position end  sim:/testbench/reset
 add wave -position end  sim:/testbench/hazard
@@ -77,6 +79,8 @@ add wave -position end  sim:/testbench/memToRegMemInput
 add wave -position end  sim:/testbench/regWriteMemInput
 add wave -position end  sim:/testbench/memWriteMemInput
 add wave -position end  sim:/testbench/memReadMemInput
+add wave -position end  sim:/testbench/memToRegMemOutput
+add wave -position end  sim:/testbench/regWriteMemOutput
 add wave -position end  sim:/testbench/forwardingMux0Ex
 add wave -position end  sim:/testbench/forwardingMux1Ex
 add wave -position end  sim:/testbench/aluOpId
@@ -90,6 +94,7 @@ add wave -position end  sim:/testbench/addressRtEx
 add wave -position end  sim:/testbench/addressRdEx
 add wave -position end  sim:/testbench/regWriteRegisterEx
 add wave -position end  sim:/testbench/regWriteRegisterMemInput
+add wave -position end  sim:/testbench/regWriteAddressMemOutput
 add wave -position end  sim:/testbench/funcId
 add wave -position end  sim:/testbench/funcEx
 add wave -position end  sim:/testbench/pcBranchId
@@ -110,14 +115,16 @@ add wave -position end  sim:/testbench/aluResultMem
 add wave -position end  sim:/testbench/aluResultEx
 add wave -position end  sim:/testbench/memWriteDataEx
 add wave -position end  sim:/testbench/aluResultMemInput
+add wave -position end  sim:/testbench/dataMemoryMemOutput
 add wave -position end  sim:/testbench/memWriteDataMemInput
+add wave -position end  sim:/testbench/aluResultMemOutput
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Leandro Lázaro  Hostname: PC-LEANDRO  ProcessID: 7516
 # 
-#           Attempting to use alternate WLF file "./wlftk4h6ch".
+#           Attempting to use alternate WLF file "./wlftecw5y8".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftk4h6ch
+#           Using alternate file: ./wlftecw5y8
 # 
 run
