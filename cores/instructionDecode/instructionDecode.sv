@@ -49,7 +49,7 @@ logic [27:0] shiftLeft_2_26_28_bitsOutput;
 assign addressRsOutput=instructionInput[25:21];
 assign addressRtOutput=instructionInput[20:16];
 assign addressRdOutput=instructionInput[15:11];
-assign pcJumpOutput={instructionInput[31:28], shiftLeft_2_26_28_bitsOutput};
+assign pcJumpOutput={pc4Input[31:28], shiftLeft_2_26_28_bitsOutput};
 assign ifFlushOutput=(branchControlOutput | jumpOutput);
 
 controller controller0 (reset, instructionInput[31:26], regDstOutput, jumpOutput, branch, memReadOutput, memToRegOutput, aluOpOutput, memWriteOutput, aluSrcOutput, regWriteOutput);

@@ -17,7 +17,7 @@
 # // FOR HIGHER EDUCATION PURPOSES ONLY
 # //
 # vsim testbench 
-# Start time: 13:14:47 on Aug 13,2019
+# Start time: 10:04:12 on Aug 14,2019
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.instructionFetch
@@ -84,9 +84,11 @@ add wave -position end  sim:/testbench/dataRtEx
 # 
 #           File in use by: Leandro Lázaro  Hostname: PC-LEANDRO  ProcessID: 7516
 # 
-#           Attempting to use alternate WLF file "./wlft6j37jf".
+#           Attempting to use alternate WLF file "./wlftyqhwkd".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft6j37jf
+#           Using alternate file: ./wlftyqhwkd
 # 
 run
+# End time: 10:09:42 on Aug 14,2019, Elapsed time: 0:05:30
+# Errors: 0, Warnings: 2
