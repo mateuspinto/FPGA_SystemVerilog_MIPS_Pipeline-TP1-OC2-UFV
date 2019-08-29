@@ -3,3 +3,4 @@ wlf*
 transcript
 vsim.wlf
 .vscode/*
+__pycache__/*
