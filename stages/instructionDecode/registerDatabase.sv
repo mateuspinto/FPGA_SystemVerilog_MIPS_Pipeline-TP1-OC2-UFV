@@ -18,7 +18,7 @@ assign readData2 = registers[readRegister2];
 always_ff @(negedge clk) begin
 
     if(reset) begin
-        $readmemb("cores/instructionDecode/registers.txt", registers);
+        $readmemb("stages/instructionDecode/registers.txt", registers);
     end
 
     else begin

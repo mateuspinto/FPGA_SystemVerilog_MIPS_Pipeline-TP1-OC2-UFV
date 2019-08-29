@@ -11,7 +11,7 @@ module instructionMemory(
 
     always_ff @(posedge clk) begin
         if(reset) begin
-        	$readmemb("cores/instructionFetch/instruction.txt",instructionMemory);
+        	$readmemb("stages/instructionFetch/instruction.txt",instructionMemory);
         end
     end
     

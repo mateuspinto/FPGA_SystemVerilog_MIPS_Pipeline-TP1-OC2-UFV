@@ -20,7 +20,7 @@ syntetizer = "vlog"
 simulator = "vsim"
 
 testbench = "testbench"
-files = testbench + ".sv auxModules.sv libMips.sv stages/if_id/if_id.sv stages/id_ex/id_ex.sv stages/ex_mem/ex_mem.sv stages/mem_wb/mem_wb.sv cores/instructionFetch/adderProgramCounter.sv cores/instructionFetch/instructionFetch.sv cores/instructionFetch/instructionMemory.sv cores/instructionFetch/programCounter.sv cores/instructionDecode/branchControl.sv cores/instructionDecode/controller.sv cores/instructionDecode/instructionDecode.sv cores/instructionDecode/registerDatabase.sv cores/instructionDecode/zeroTest.sv cores/executing/alu.sv cores/executing/aritimeticalControl.sv cores/executing/executing.sv cores/memory/memoryDatabase.sv cores/memory/memory.sv cores/writeBack/writeBack.sv"
+files = testbench + ".sv auxModules.sv libMips.sv pipelineRegisters/if_id/if_id.sv pipelineRegisters/id_ex/id_ex.sv pipelineRegisters/ex_mem/ex_mem.sv pipelineRegisters/mem_wb/mem_wb.sv stages/instructionFetch/adderProgramCounter.sv stages/instructionFetch/instructionFetch.sv stages/instructionFetch/instructionMemory.sv stages/instructionFetch/programCounter.sv stages/instructionDecode/branchControl.sv stages/instructionDecode/controller.sv stages/instructionDecode/instructionDecode.sv stages/instructionDecode/registerDatabase.sv stages/instructionDecode/zeroTest.sv stages/executing/alu.sv stages/executing/aritimeticalControl.sv stages/executing/executing.sv stages/memory/memoryDatabase.sv stages/memory/memory.sv stages/writeBack/writeBack.sv"
 exit = 0
 
 showMenu()
@@ -59,7 +59,7 @@ while exit == 0:
         selection = int(input("Type another option or type 0 to show the menu again: "))
 
     elif selection == 7:
-        mounter = mipsMounter("instruction.asm", "cores/instructionFetch/instruction.txt")
+        mounter = mipsMounter("instruction.asm", "stages/instructionFetch/instruction.txt")
         mounter.mount()
         mounter.linkEdit()
         mounter.saveLinkEdited()

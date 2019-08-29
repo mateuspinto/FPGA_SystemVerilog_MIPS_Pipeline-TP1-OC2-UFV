@@ -13,7 +13,7 @@ assign readData = memory[address[11:2]];
 
 always_ff @(posedge clk) begin
     if (reset) begin
-        $readmemb("cores/memory/memory.txt",memory);
+        $readmemb("stages/memory/memory.txt",memory);
     end
 
     else begin
