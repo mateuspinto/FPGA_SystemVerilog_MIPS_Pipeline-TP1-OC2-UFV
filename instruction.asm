@@ -1,6 +1,9 @@
-addi $s0, $zero, 8
-mateus:
-addi $s3, $zero, 3
-add $s0, $s0, $s0
-addi $zero, $zero, 1
-bne $s3, $zero, mateus
+addi $s1, $zero, 2
+
+beq $s1, $zero, two
+
+addi $s0, $zero, 1
+
+two: addi $s0, $s0, 2
+
+addi $s0, $s0, 3

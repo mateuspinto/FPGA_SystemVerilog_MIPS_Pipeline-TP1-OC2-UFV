@@ -39,11 +39,13 @@ module instructionDecode(
 
     output logic [5:0] funcOutput,
 
-    output logic ifFlushOutput
+    output logic ifFlushOutput,
+
+    output logic zeroTestOutput
 
 );
 
-logic zeroTestOutput;
+// logic zeroTestOutput;
 logic [1:0] branch;
 logic [31:0] shiftLef_2_32bitsOutput;
 logic [27:0] shiftLeft_2_26_28_bitsOutput;
@@ -67,7 +69,6 @@ branchControl branchControl0 (reset, branch, zeroTestOutput, branchControlOutput
 
 //Jump
 shiftLeft_2_26_28_bits shiftLeft_2_26_28_bits0 (instructionInput[25:0], shiftLeft_2_26_28_bitsOutput);
-
 
 
 

@@ -7,8 +7,6 @@ module zeroTest(
     output logic zeroTestOutput
 );
 
-logic [31:0] resultSub=(dataRsInput-dataRtInput);
-
 always_comb begin
 
     if(reset)begin
@@ -16,15 +14,13 @@ always_comb begin
     end
 
     else begin
-        case(resultSub)
-            0: begin
-                zeroTestOutput <= 0;
-            end
+        if(dataRsInput == dataRtInput) begin
+            zeroTestOutput <= 1;
+        end
 
-            default: begin
-                zeroTestOutput <= 1;
-            end
-        endcase
+        else begin
+            zeroTestOutput <= 0;
+        end
     end
 end
 
