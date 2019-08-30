@@ -1,7 +1,16 @@
-addi $s0, $s0, 8
-add $s1, $s1, $s1
-add $s1, $s1, $s1
-add $s1, $s1, $s1
-add $s1, $s1, $s1
-add $s0, $s0, $s0
-add $s0, $s0, $s0
+addi $s0, $zero, 8
+add $zero, $zero, $zero
+add $zero, $zero, $zero
+add $zero, $zero, $zero
+add $zero, $zero, $zero
+sw $s0, 8($zero)
+add $zero, $zero, $zero
+add $zero, $zero, $zero
+add $zero, $zero, $zero
+add $zero, $zero, $zero
+lw $s2, 8($zero)
+add $s2, $s2, $s2
+add $zero, $zero, $zero
+add $zero, $zero, $zero
+add $zero, $zero, $zero
+add $zero, $zero, $zero
