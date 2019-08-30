@@ -1,4 +1,4 @@
-module forwardingUnit(
+module forward(
 	input logic [4:0] IDEX_src1, IDEX_src2, IDEX_dest,
 	input logic       EXMEM_RegWrite,
 	input logic [4:0] EXMEM_dest,

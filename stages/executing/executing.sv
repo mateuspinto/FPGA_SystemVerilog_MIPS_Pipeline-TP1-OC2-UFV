@@ -53,8 +53,8 @@ assign memWriteOutput=memWriteInput;
 assign memReadOutput=memReadInput;
 assign memWriteDataOutput=mux3_1_32bits1Output;
 
-mux3_1_32bits mux3_1_32bits0 (forwardingMux0Input, dataRsInput, regWriteDataWbInput, aluResultMemInput, mux3_1_32bits0Output);
-mux3_1_32bits mux3_1_32bits1 (forwardingMux1Input, dataRtInput, regWriteDataWbInput, aluResultMemInput, mux3_1_32bits1Output);
+mux3_1_32bits mux3_1_32bits0 (forwardingMux0Input, dataRsInput, aluResultMemInput, regWriteDataWbInput, mux3_1_32bits0Output);
+mux3_1_32bits mux3_1_32bits1 (forwardingMux1Input, dataRtInput, aluResultMemInput, regWriteDataWbInput, mux3_1_32bits1Output);
 
 mux2_1_32bits mux2_1_32bits0 (aluSrcInput, mux3_1_32bits1Output, immediateExtendedInput, mux2_1_32bits0Output);
 

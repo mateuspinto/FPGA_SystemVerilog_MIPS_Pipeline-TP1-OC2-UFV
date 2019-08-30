@@ -11,7 +11,7 @@ module memoryDatabase(
 logic [31:0] memory [1023:0];
 assign readData = memory[address[11:2]];
 
-always_ff @(posedge clk) begin
+always_ff @(negedge clk) begin
     if (reset) begin
         $readmemb("stages/memory/memory.txt",memory);
     end
