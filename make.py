@@ -5,11 +5,9 @@ def showMenu():
     print("###################################################################################################")
     print("#                                       Welcome to MIPS                                           #")
     print("###################################################################################################")
-    print("# 1- Create the library to perform the simulation                                                 #")
-    print("# 2- Perform the simulation                                                                       #")
-    print("# 3- Show results                                                                                 #")
-    print("# 4- Show fpga project in Quartus Prime                                                           #")
-    print("# 7- Turn MIPS Assembly into binary")
+    print("# 1- Mount assembly and simulate MIPS                                                             #")
+    print("# 2- Show results                                                                                 #")
+    print("# 3- Show fpga project in Quartus Prime                                                           #")
     print("# 8- Clean results and library                                                                    #")
     print("# 9- Exit                                                                                         #")
     print("# Note: If you dont know what are you doing, simple input the numbers in order one by one         #")
@@ -34,37 +32,31 @@ while exit == 0:
     elif selection == 1:
 
         print("Creating library...")
+
         os.system(librarier)
 
-        selection = int(input("Type another option or type 0 to show the menu again: "))
-
-    elif selection == 2:
-
-        print("Syntetizing simulation...")
-        os.system(syntetizer + " " + files)
-        
-        selection = int(input("Type another option or type 0 to show the menu again: "))
-
-    elif selection == 3:
-
-        print("Showing simulation...")
-        os.system(simulator + " " + testbench)
-
-        selection = int(input("Type another option or type 0 to show the menu again: "))
-
-    elif selection == 4:
-        print("Opening Quartus Prime...")
-        os.system("simpleMips.qpf")
-
-        selection = int(input("Type another option or type 0 to show the menu again: "))
-
-    elif selection == 7:
+        print("Turning MIPS assembly into binary...")
         mounter = mipsMounter("instruction.asm", "stages/instructionFetch/instruction.txt")
         mounter.mount()
         mounter.linkEdit()
         mounter.saveLinkEdited()
 
-        mounter = None
+        print("Syntetizing simulation...")
+        os.system(syntetizer + " " + files)
+
+        selection = int(input("Type another option or type 0 to show the menu again: "))
+
+    elif selection == 2:
+        print("Showing simulation...")
+        os.system(simulator + " " + testbench)
+        
+
+        selection = int(input("Type another option or type 0 to show the menu again: "))
+
+    elif selection == 3:
+        
+        print("Opening Quartus Prime...")
+        os.system("simpleMips.qpf")
 
         selection = int(input("Type another option or type 0 to show the menu again: "))
 
