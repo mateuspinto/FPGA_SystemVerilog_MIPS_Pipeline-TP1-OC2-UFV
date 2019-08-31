@@ -17,7 +17,7 @@ syntetizer = "vlog"
 simulator = "vsim"
 
 testbench = "testbench"
-files = testbench + ".sv auxModules.sv libMips.sv forward.sv hazard.sv pipelineRegisters/if_id/if_id.sv pipelineRegisters/id_ex/id_ex.sv pipelineRegisters/ex_mem/ex_mem.sv pipelineRegisters/mem_wb/mem_wb.sv stages/instructionFetch/adderProgramCounter.sv stages/instructionFetch/instructionFetch.sv stages/instructionFetch/instructionMemory.sv stages/instructionFetch/programCounter.sv stages/instructionDecode/branchControl.sv stages/instructionDecode/controller.sv stages/instructionDecode/instructionDecode.sv stages/instructionDecode/registerDatabase.sv stages/instructionDecode/zeroTest.sv stages/executing/alu.sv stages/executing/aritimeticalControl.sv stages/executing/executing.sv stages/memory/memoryDatabase.sv stages/memory/memory.sv stages/writeBack/writeBack.sv"
+files = testbench + ".sv auxModules.sv libMips.sv forward.sv hazard.sv pipelineRegisters/if_id/if_id.sv pipelineRegisters/id_ex/id_ex.sv pipelineRegisters/ex_mem/ex_mem.sv pipelineRegisters/mem_wb/mem_wb.sv stages/instructionFetch/adderProgramCounter.sv stages/instructionFetch/instructionFetch.sv stages/instructionFetch/instructionMemory.sv stages/instructionFetch/programCounter.sv stages/executing/branchControl.sv stages/instructionDecode/controller.sv stages/instructionDecode/instructionDecode.sv stages/instructionDecode/registerDatabase.sv stages/executing/alu.sv stages/executing/aritimeticalControl.sv stages/executing/executing.sv stages/memory/memoryDatabase.sv stages/memory/memory.sv stages/writeBack/writeBack.sv"
 exit = 0
 
 showMenu()
