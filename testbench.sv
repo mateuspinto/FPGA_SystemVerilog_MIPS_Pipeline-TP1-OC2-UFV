@@ -27,7 +27,7 @@ module testbench();
 	end
 
 	hazard hazard0 (memReadEx, addressRsId, addressRtId, regWriteRegisterEx, hazard);
-	forward forward0 (addressRsEx, addressRtEx, addressRdEx, regWriteMemInput, regWriteRegisterMemInput, regWriteWbInput, regWriteAddressMemOutput, forwardingMux0Ex, forwardingMux1Ex, forwardC);
+	forward forward0 (addressRsEx, addressRtEx, addressRdEx, regWriteMemInput, regWriteAddressMemOutput, regWriteWbInput, regWriteAddressWbInput, forwardingMux0Ex, forwardingMux1Ex, forwardC);
 
 	instructionFetch instructionFetch0 (clk, reset, hazard, branchControlExOutput, pcBranchExOutput, jumpIdOutput, pcJumpIdOutput, instructionIfInput, pcIfInput);
 	if_id if_id0 (clk, reset, hazard, branchControlExOutput, jumpIdOutput, pcIfInput, instructionIfInput, pcIdInput, instructionIdInput);
