@@ -43,13 +43,14 @@ module executing(
 
     output logic [4:0] regWriteRegisterOutput,
 
-    output logic aluResultZeroOutput,
+    //output logic aluResultZeroOutput,
 
     output logic branchControlOutput,
 
     output logic [31:0] pcBranchOutput
 );
 
+logic aluResultZeroOutput;
 logic regHiLoWrite;
 logic [3:0] aluControl;
 logic [31:0] mux3_1_32bits0Output, mux3_1_32bits1Output, mux2_1_32bits0Output, shiftLef_2_32bitsOutput;
