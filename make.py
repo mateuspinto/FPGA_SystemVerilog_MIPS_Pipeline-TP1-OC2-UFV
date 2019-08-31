@@ -8,7 +8,6 @@ def showMenu():
     print("# 1- Mount assembly and simulate MIPS                                                             #")
     print("# 2- Show results                                                                                 #")
     print("# 3- Show fpga project in Quartus Prime                                                           #")
-    print("# 8- Clean results and library                                                                    #")
     print("# 9- Exit                                                                                         #")
     print("# Note: If you dont know what are you doing, simple input the numbers in order one by one         #")
     print("###################################################################################################")
@@ -60,15 +59,9 @@ while exit == 0:
 
         selection = int(input("Type another option or type 0 to show the menu again: "))
 
-    elif selection == 8:
-
-        print("Cleaning...")
-        # Please dont uncomment this until the work is finished +_+
-        os.system("git clean -ffxd :/")
-
-        selection = int(input("Type another option or type 0 to show the menu again: "))
-
     elif selection == 9:
+        # Please dont uncomment this until the work is finished +_+
+        # os.system("git clean -ffxd :/")
         exit=1
 
     else:
