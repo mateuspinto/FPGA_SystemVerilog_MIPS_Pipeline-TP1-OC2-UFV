@@ -4,6 +4,10 @@ module id_ex(
 
     input logic hazard,
 
+    input logic branchControlExInput,
+
+    input logic [31:0] pc4Input,
+
     input logic memToRegInput,
     input logic regWriteInput,
     input logic memWriteInput,
@@ -11,6 +15,7 @@ module id_ex(
     input logic [3:0] aluOpInput,
     input logic aluSrcInput,
     input logic regDstInput,
+    input logic [1:0] branchInput,
 
     input logic [31:0] immediateExtendedInput,
 
@@ -23,6 +28,8 @@ module id_ex(
 
     input logic [5:0] funcInput,
 
+    output logic [31:0] pc4Output,
+
     output logic memToRegOutput,
     output logic regWriteOutput,
     output logic memWriteOutput,
@@ -30,6 +37,7 @@ module id_ex(
     output logic [3:0] aluOpOutput,
     output logic aluSrcOutput,
     output logic regDstOutput,
+    output logic [1:0] branchOutput,
 
     output logic [31:0] immediateExtendedOutput,
 
@@ -46,7 +54,9 @@ module id_ex(
 
 always_ff @(posedge clk) begin 
 
-    if(reset | hazard)begin
+    if(reset | hazard | branchControlExInput)begin
+
+        pc4Output<=0;
 
         memToRegOutput<=0;
         regWriteOutput<=0;
@@ -55,6 +65,7 @@ always_ff @(posedge clk) begin
         aluOpOutput<=0;
         aluSrcOutput<=0;
         regDstOutput<=0;
+        branchOutput<=0;
 
         immediateExtendedOutput<=0;
 
@@ -71,6 +82,8 @@ always_ff @(posedge clk) begin
 
     else begin
 
+        pc4Output<=pc4Input;
+
         memToRegOutput<=memToRegInput;
         regWriteOutput<=regWriteInput;
         memWriteOutput<=memWriteInput;
@@ -78,6 +91,7 @@ always_ff @(posedge clk) begin
         aluOpOutput<=aluOpInput;
         aluSrcOutput<=aluSrcInput;
         regDstOutput<=regDstInput;
+        branchOutput<=branchInput;
 
         immediateExtendedOutput<=immediateExtendedInput;
 

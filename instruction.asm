@@ -1,9 +1,11 @@
-addi $s1, $zero, 2
+addi $s0, $zero, 10
+add $s3, $zero, $s0
+init: beq $s1, $s0, exit
 
-beq $s1, $zero, two
+addi $s1, $s1, 1
 
-addi $s0, $zero, 1
+j init
 
-two: addi $s0, $s0, 2
+exit: addi $s2, $zero, 0
 
-addi $s0, $s0, 3
+
