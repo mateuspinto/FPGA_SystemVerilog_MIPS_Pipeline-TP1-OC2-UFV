@@ -61,7 +61,7 @@ while exit == 0:
 
     elif selection == 9:
         # Please dont uncomment this until the work is finished +_+
-        # os.system("git clean -ffxd :/")
+        os.system("git clean -ffxd :/")
         exit=1
 
     else:
