@@ -56,7 +56,7 @@ assign funcOutput=instructionInput[5:0];
 controller controller0 (reset, instructionInput[31:26], regDstOutput, jumpOutput, branchOutput, memReadOutput, memToRegOutput, aluOpOutput, memWriteOutput, aluSrcOutput, regWriteOutput);
 registerDatabase registerDatabase0 (clk, reset, regWriteInput, instructionInput[25:21], instructionInput[20:16], writeRegisterInput, writeDataInput, dataRsOutput, dataRtOutput);
 
-//Branch
+//Immediate
 signalExtender16_32bits signalExtender16_32bitsBranch0 (instructionInput[15:0], immediateExtendedOutput);
 
 //Jump
