@@ -1,5 +1,5 @@
 import os
-from mipsMounter import mipsMounter
+from MipsMounter import MipsMounter
 
 def showMenu():
     print("###################################################################################################")
@@ -35,10 +35,9 @@ while exit == 0:
         os.system(librarier)
 
         print("Turning MIPS assembly into binary...")
-        mounter = mipsMounter("instruction.asm", "stages/instructionFetch/instruction.txt")
-        mounter.mount()
-        mounter.linkEdit()
-        mounter.saveLinkEdited()
+        mounter = MipsMounter("instruction.asm", "stages/instructionFetch/instruction.txt")
+        print(repr(mounter))
+        mounter.run()
 
         print("Syntetizing simulation...")
         os.system(syntetizer + " " + files)
