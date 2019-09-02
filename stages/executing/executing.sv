@@ -3,6 +3,8 @@ module executing(
     input logic clk,
     input logic reset,
 
+    input logic [31:0] pc4Input,
+
     input logic memToRegInput,
     input logic regWriteInput,
     input logic memWriteInput,
@@ -11,6 +13,7 @@ module executing(
     input logic [3:0] aluOpInput,
     input logic aluSrcInput,
     input logic regDstInput,
+    input logic [1:0] branchInput,
 
     input logic [31:0] immediateExtendedInput,
 
@@ -40,12 +43,17 @@ module executing(
 
     output logic [4:0] regWriteRegisterOutput,
 
-    output logic aluResultZeroOutput
+    //output logic aluResultZeroOutput,
+
+    output logic branchControlOutput,
+
+    output logic [31:0] pcBranchOutput
 );
 
+logic aluResultZeroOutput;
 logic regHiLoWrite;
 logic [3:0] aluControl;
-logic [31:0] mux3_1_32bits0Output, mux3_1_32bits1Output, mux2_1_32bits0Output;
+logic [31:0] mux3_1_32bits0Output, mux3_1_32bits1Output, mux2_1_32bits0Output, shiftLef_2_32bitsOutput;
  
 assign memToRegOutput=memToRegInput;
 assign regWriteOutput=regWriteInput;
@@ -62,6 +70,11 @@ mux2_1_5bits mux2_1_5bits0 (regDstInput, addressRtInput, addressRdInput, regWrit
 
 aritimeticalControl aritimeticalControl0 (reset, aluOpInput, funcInput, aluControl, regHiLoWrite);
 alu alu0 (reset, aluControl, mux3_1_32bits0Output, mux2_1_32bits0Output, aluResultOutput, aluResultZeroOutput);
+
+shiftLef_2_32bits shiftLef_2_32bits0(immediateExtendedInput, shiftLef_2_32bitsOutput);
+adder_32bits adder_32bits0 (shiftLef_2_32bitsOutput, pc4Input, pcBranchOutput);
+
+branchControl branchControl0 (reset, branchInput, aluResultZeroOutput, branchControlOutput);
 
 
 endmodule

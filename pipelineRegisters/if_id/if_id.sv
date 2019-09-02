@@ -4,7 +4,9 @@ module if_id(
 
     input logic hazard,
 
-    input logic ifFlushInput,
+    input logic branchControlExInput,
+
+    input logic jumpIdInput,
 
     input logic [31:0] pcInput,
     input logic [31:0] instructionInput,
@@ -15,7 +17,7 @@ module if_id(
 
 always_ff @(posedge clk) begin 
 
-    if (reset | ifFlushInput) begin
+    if (reset | branchControlExInput | jumpIdInput) begin
         pcOutput<=0;
         instructionOutput<=0;
     end

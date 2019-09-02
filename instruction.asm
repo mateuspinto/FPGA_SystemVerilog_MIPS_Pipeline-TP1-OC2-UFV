@@ -1,9 +1,18 @@
-addi $s1, $zero, 2
+addi $s0, $zero, 10
+addi $s1, $zero, 0
 
-beq $s1, $zero, two
+sw $s0,0($zero)
+sw $s1,8($zero)
 
-addi $s0, $zero, 1
+lw $s2,0($zero)
+lw $s3,8($zero)
 
-two: addi $s0, $s0, 2
+j exit:
 
-addi $s0, $s0, 3
+init: beq $s2, $s3, exit
+
+addi $s3, $s3, 1
+
+j init
+
+exit: addi $s4, $zero, 9
