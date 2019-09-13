@@ -7,10 +7,13 @@ module registerDatabase(
     input logic [15:11] writeRegister,
     input logic [31:0] writeData,
     output logic [31:0] readData1,
-    output logic [31:0] readData2
+    output logic [31:0] readData2,
+    output wire [31:0] ioRegisters [31:0]
 );
 
 logic [31:0] registers [31:0];
+
+assign ioRegisters = registers;
 
 assign readData1 = registers[readRegister1];
 assign readData2 = registers[readRegister2];

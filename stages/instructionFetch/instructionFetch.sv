@@ -12,13 +12,15 @@ module instructionFetch(
 
     //Go to Instruction Decode
     output logic [31:0] instructionOutput,
-    output logic [31:0] pc4Output
+    output logic [31:0] pc4Output,
+
+    output wire [31:0] ioInstruction [255:0]
 );
 
 logic [31:0] pcOutputDemuxJump, pc4, pcOutput, pcInput;
 assign pc4Output=pc4;
 
-instructionMemory instructionMemory0 (clk, reset, pcOutput, instructionOutput);
+instructionMemory instructionMemory0 (clk, reset, pcOutput, instructionOutput, ioInstruction);
 programCounter programCounter0 (clk, reset, hazard, pcInput, pcOutput);
 
 adderProgramCounter adderProgramCounter0 (clk, reset, pcOutput, pc4);

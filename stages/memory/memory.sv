@@ -20,7 +20,9 @@ module memory(
 
     output logic [31:0] aluResultOutput,
 
-    output logic [4:0] regWriteAddressOutput
+    output logic [4:0] regWriteAddressOutput,
+
+    output wire [31:0] ioMemory [1023:0]
 
 );
 
@@ -29,7 +31,7 @@ assign memToRegOutput=memToRegInput;
 assign regWriteOutput=regWriteInput;
 assign regWriteAddressOutput=regWriteAddressInput;
 
-memoryDatabase memoryDatabase0(clk, reset, memWriteInput, aluResultInput, memWriteDataInput, dataMemoryOutput);
+memoryDatabase memoryDatabase0(clk, reset, memWriteInput, aluResultInput, memWriteDataInput, dataMemoryOutput, ioMemory);
 
 endmodule
 

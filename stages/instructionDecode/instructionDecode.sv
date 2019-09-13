@@ -38,7 +38,9 @@ module instructionDecode(
     output logic jumpOutput,
     output logic [31:0] pcJumpOutput,
 
-    output logic [5:0] funcOutput
+    output logic [5:0] funcOutput,
+
+    output wire [31:0] ioRegisters [31:0]
 
 );
 
@@ -54,7 +56,7 @@ assign pcJumpOutput={pc4Input[31:28], shiftLeft_2_26_28_bitsOutput};
 assign funcOutput=instructionInput[5:0];
 
 controller controller0 (reset, instructionInput[31:26], regDstOutput, jumpOutput, branchOutput, memReadOutput, memToRegOutput, aluOpOutput, memWriteOutput, aluSrcOutput, regWriteOutput);
-registerDatabase registerDatabase0 (clk, reset, regWriteInput, instructionInput[25:21], instructionInput[20:16], writeRegisterInput, writeDataInput, dataRsOutput, dataRtOutput);
+registerDatabase registerDatabase0 (clk, reset, regWriteInput, instructionInput[25:21], instructionInput[20:16], writeRegisterInput, writeDataInput, dataRsOutput, dataRtOutput, ioRegisters);
 
 //Immediate
 signalExtender16_32bits signalExtender16_32bitsBranch0 (instructionInput[15:0], immediateExtendedOutput);
